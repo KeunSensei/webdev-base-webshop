@@ -7,7 +7,7 @@ session_start();
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "root";
-$dbname = "webshop";
+$dbname = "base_cms";
 
 /**
  * Voor de Windows gebruikers;
@@ -24,8 +24,8 @@ if ($con -> connect_errno) {
     exit();
 }
 
-define("BASEURL","http://localhost/webdev-base-webshop/");
-define("BASEURL_CMS","http://localhost/webdev-base-webshop/admin/");
+define("BASEURL","http://localhost/base_cms/");
+define("BASEURL_CMS","http://localhost/base_cms/admin/");
 
 function prettyDump ( $var ) {
     echo "<pre>";
