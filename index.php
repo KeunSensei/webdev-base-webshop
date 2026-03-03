@@ -5,3 +5,4 @@ Homepage
 <?php
     include('core/footer.php');
 ?>
+DFsdafsdfsadfc

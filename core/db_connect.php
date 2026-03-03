@@ -25,6 +25,7 @@ if ($con -> connect_errno) {
 }
 
 define("BASEURL","http://localhost/base_cms/");
+define("OWNURL","/Users/kborghols/Sites/localhost/base_cms/");
 define("BASEURL_CMS","http://localhost/base_cms/admin/");
 
 function prettyDump ( $var ) {

@@ -16,11 +16,20 @@
         $data = file_get_contents($tmp_name);
         $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
-        prettyDump($base64);exit();
+        prettyDump(__DIR__);exit();
         
-        move_uploaded_file($_FILES['image']['tmp_name'], "../../assets/img/".$filename);
+        move_uploaded_file($_FILES['image']['tmp_name'], OWNURL."assets/img/".$filename);
 
 
+        if(isset($_POST['title']) && $_POST['title'] == ''){
+            echo "Vul een waarde in van title";
+        }
+        //Dit is een /"blaat/"
+        //Dit is een &quote;blaat&quote;
+
+        //&euro; €
+        //&nbsp; <spatie>
+        //<input type="text" value="Dit is een /"blaat/" " />
         $query1 = $con->prepare("INSERT INTO products (title,price,description, image) VALUES (?,?,?,?);");
         if ($query1 === false) {
             // noticeRij('error');
@@ -38,7 +47,7 @@
     }else{
 ?>
 <form action="<?= CURHREF;?>" method="post" enctype="multipart/form-data">
-    <input type="text" name="title" placeholder="Title" >
+    <input type="text" name="title" placeholder="Title" required>
     <input type="text" name="price" placeholder="Price" >
   
     <textarea name="description" id=""></textarea>

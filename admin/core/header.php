@@ -1,5 +1,5 @@
 <?php
-    include($_SERVER['DOCUMENT_ROOT'].'/base_cms/core/db_connect.php');
+    include_once($_SERVER['DOCUMENT_ROOT'].'/base_cms/core/db_connect.php');
     include($_SERVER['DOCUMENT_ROOT'].'/base_cms/admin/core/functions.php');
 
     define("CURHREF", filter_var( (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],FILTER_SANITIZE_STRING));
