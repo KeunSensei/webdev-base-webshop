@@ -32,7 +32,7 @@
                     } 
                     $query1->close();
                     
-
+                    //TODO: naar mail sturen
                     echo "Hierbij de nieuwe url:<br>";
                     echo "<a href='{$url}'>".$url."</a>";
                     exit();

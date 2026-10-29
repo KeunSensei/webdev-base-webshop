@@ -9,6 +9,8 @@
         
         $password = $con->real_escape_string($_POST['password']);
         
+       /* This block of code is responsible for handling the login process in PHP. Let me break it down
+       for you: */
         $liqry = $con->prepare("SELECT admin_user_id,email,password FROM admin_user WHERE email = ? LIMIT 1;");
         if($liqry === false) {
             echo mysqli_error($con);

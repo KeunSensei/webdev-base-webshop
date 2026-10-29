@@ -4,7 +4,7 @@ session_start();
 /**
  * Voor de MAC gebruikers;
  */
-$dbhost = "localhost";
+$dbhost = "mysql_db";
 $dbuser = "root";
 $dbpass = "root";
 $dbname = "base_cms";
